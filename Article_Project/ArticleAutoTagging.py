@@ -1,6 +1,6 @@
 import os
 from sklearn.feature_extraction.text \
-import CountVectorizer
+    import CountVectorizer
 import scipy
 from sklearn.feature_extraction import text
 
@@ -10,7 +10,7 @@ mypath = os.getcwd() + "\\Articles"
 for file in os.listdir(mypath):
     f = open(mypath + "\\" + file, "r")
     document = []
-    temp=""
+    temp = ""
     # step 2 :- read the content in to
     # document collection
     for line in f.readlines():
@@ -32,15 +32,8 @@ for file in os.listdir(mypath):
 
     fbow = open(f.name + "bow.txt", "w")
 
-    for _count,_bowname in zip(coo.data,bows.keys()):
-            if(_count>2):
-                fbow.write(str(_count) + "  -- " + _bowname + "\n")
+    for _count, _bowname in zip(coo.data, bows.keys()):
+        if (_count > 2):
+            fbow.write(str(_count) + "  -- " + _bowname + "\n")
 
     fbow.close()
-
-
-
-
-
-
-
